@@ -1,0 +1,27 @@
+{
+  "name": "climbers",
+  "version": "0.0.1",
+  "description": "Indoor climbing gyms",
+  "main": "index.js",
+  "repository": "https://github.com/nailerHeum/climbers.git",
+  "author": "Seongheum Choi <kingman330@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "test": "yarn workspaces foreach run test",
+    "client-test": "yarn workspace client test",
+    "server-test": "yarn workspace server test",
+    "build": "yarn workspaces foreach run build",
+    "client-build": "yarn workspace client build",
+    "server-build": "yarn workspace server build",
+    "start": "yarn workspaces foreach -p run start",
+    "client-start": "yarn workspace client start",
+    "server-start": "yarn workspace server start",
+    "server:dev": "yarn workspace server run start:dev"
+  },
+  "packageManager": "yarn@3.1.1"
+}
